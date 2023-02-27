@@ -22,11 +22,13 @@ body {
 
 .container {
 
-    position: relative; /* necessário para usar ::before */
+    position: relative;
+    /* necessário para usar ::before */
     padding: 2rem;
     color: #fff;
     border-radius: 2.5px;
-    background-color: rgba(49, 71, 237, 0.8); /* fundo com transparência */
+    background-color: rgba(49, 71, 237, 0.5);
+    /* fundo com transparência */
     box-shadow: #000000 0px 3px 8px;
 }
 
@@ -135,8 +137,70 @@ body {
     align-items: center;
 }
 
-#umidity {
+#humidity {
     border-right: 0.5px solid #fff;
     margin: 0.6rem;
     padding: 0.6rem;
+}
+
+/* estilos para telas menores que 768 pixels de largura */
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        /* ajuste de tamanho da fonte */
+    }
+
+    .container {
+        background-color: rgba(49, 71, 237, 0.5); /* altere o valor de transparência de acordo com sua preferência */
+    }
+
+    .form {
+        flex-direction: column;
+        margin-top: 1rem;
+        /* adição de espaçamento entre os elementos */
+    }
+
+    .form-input-container {
+        flex-direction: column;
+        /* ajuste na disposição dos elementos */
+    }
+
+    .form input {
+        width: 100%;
+        margin-bottom: 1rem;
+        /* adição de espaçamento entre os inputs */
+    }
+
+    .form button {
+        margin-left: 0;
+        margin-top: 1rem;
+        /* adição de espaçamento entre o botão e os inputs */
+    }
+
+    #suggestions {
+        display: none;
+        /* ajuste na disposição dos elementos */
+    }
+
+    #weather-data h2 {
+        font-size: 2rem;
+        /* ajuste de tamanho da fonte */
+    }
+
+    #weather-data span {
+        margin: 0.6rem 0;
+        /* adição de espaçamento entre os spans */
+    }
+
+    #details-container {
+        flex-direction: column;
+        /* ajuste na disposição dos elementos */
+    }
+
+    #humidity {
+        border-right: none;
+        margin: 0.6rem 0;
+        padding: 0.6rem 0;
+        /* adição de espaçamento entre os elementos */
+    }
 }
